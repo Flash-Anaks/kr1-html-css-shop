@@ -8,7 +8,7 @@ const orderButtons = document.querySelectorAll('.product-card__button');
 const closeDialogButton = document.getElementById('close-order-dialog');
 
 // Получаем скрытое поле, в которое будет записан выбранный товар.
-const selectedProductInput = document.getElementById('selected-product');
+const selectedProductInput = document.getElementById('order-form');
 
 // Перебираем все кнопки «Заказать».
 orderButtons.forEach((button) => {
