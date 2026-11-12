@@ -79,8 +79,17 @@ footer {
 */
 header {
   background-color: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
+img {
+  max-width: 200px;
+  height: 100%;
+  object-fit: contain;
+
+}
 /*
   Оформляем подвал страницы тем же фоном,
   чтобы визуально отделить его от основного содержимого.
@@ -236,6 +245,7 @@ a:focus-visible {
   Общий класс для разделов страницы.
 */
 .section {
+  display: grid;
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
 }
@@ -303,13 +313,18 @@ a:focus-visible {
   gap: var(--space-lg);
 }
 
+.products-card__0 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
 /*
   Карточка товара — самостоятельный блок.
   На следующих занятиях карточки будут доработаны и выстроены в сетку.
 */
 .product-card {
   margin-top: 12px;
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: var(--space-sm);
   margin-bottom: 0;
@@ -351,6 +366,12 @@ a:focus-visible {
   align-self: flex-start;
 }
 
+.product-card__image-container {
+  display: block;
+  width: 200px;
+  color: var(--color-border);
+  height: 150px;
+}
 /*
   Убираем лишний верхний отступ у заголовка карточки.
 */
@@ -396,6 +417,7 @@ a:focus-visible {
   top: 2px;
   font-size: 30px;
   color: var(--color-muted);
+  z-index: 0;
 }
 
 /* ===============================
